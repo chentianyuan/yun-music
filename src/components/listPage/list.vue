@@ -21,7 +21,10 @@
 			<img class="cover" v-bind:src="data.picUrl"/>
 		</header>
 		<section>
-			
+			<aside><span><i class="fa fa-play"></i>播放全部<b> (共{{dataList.length}}首)</b></span><span><i></i>多选</span></aside>
+				<ul>
+					<li v-for="(music,index) in dataList"></li>
+				</ul>
 		</section>
 	</div>
 </template>
@@ -32,7 +35,8 @@
 		name:'list',
 		data(){
 			return {
-				data:{}
+				data:{},
+				dataList:[]
 			}
 		},
 		mounted(){
@@ -149,5 +153,39 @@
 	}
 	.fa-align-left{
 		transform: rotate(270deg);
+	}
+	section{
+		background:#fff;
+		margin:10px 0 50px;
+		text-align:left;	
+	}
+	aside span:first-child{
+		display:inline-block;
+		width:80%;
+		height:36px;
+		font-size:1.2rem;
+		vertical-align:middle;
+		line-height:36px;
+	}
+	aside span:last-child{
+		display:inline-block;
+		width:20%;
+		height:36px;
+		line-height:36px;
+		vertical-align:middle;
+	}	
+	aside i{
+		display:inline-block;
+		height:36px;
+		width:36px;
+		text-align:center;
+		line-height:36px;
+		font-size:1.2rem;
+		vertical-align:top;
+	}
+	aside b{
+		font-weight:normal;
+		font-size:1rem;
+		color:#AAAAAA;
 	}
 </style>

@@ -39,6 +39,7 @@ export default new Vuex.Store({
 					console.log(err)
 				})		
 		},
+		//歌单改变
 		changeList(context,music){
 			context.commit('changeList',music)	
 		}
@@ -54,6 +55,7 @@ export default new Vuex.Store({
 	    getjson(state, res) {
 	    	state.msg = res.data.result
 	    },
+	    //此改变被提交
 	    changeList(state, music){
 	    	state.list = music
 	    	console.log(music.name)
