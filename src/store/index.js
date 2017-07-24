@@ -12,7 +12,10 @@ export default new Vuex.Store({
 		msg:{},
 		//list用于确认所进入歌单
 		//当触发跳转至歌单后，在组件中commit一个action，传入所选参数
-		list:{}
+		list:{
+			//给初始值，避免组件中获取报错
+			type:1
+		}
 	},
 	//暴露获取vuex数据的其他方法
 	getters:{

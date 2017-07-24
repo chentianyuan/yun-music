@@ -2,7 +2,7 @@
 	<div class="warp">
 		<header>
 			<div class="list-head">
-				<span class="fa fa-angle-left"></span>
+				<span class="fa fa-angle-left" v-on:click="back"></span>
 				<h4>歌单</h4>
 				<span class="fa fa-align-left"></span>
 			</div>
@@ -22,14 +22,20 @@
 		</header>
 		<section>
 			<aside><span><i class="fa fa-play"></i>播放全部<b> (共{{dataList.length}}首)</b></span><span><i></i>多选</span></aside>
-				<ul>
-					<li v-for="(music,index) in dataList"></li>
+				<ul class="all-music">
+					<li v-for="(music,index) in dataList">
+						<hr/>
+						<span>{{index + 1}}</span>
+						<h4>{{music.name}}</h4>
+						<p>{{music.ar[0].name}} <i v-if="music.alia[0]">-</i> {{music.alia[0]}}</p>
+					</li>
 				</ul>
 		</section>
 	</div>
 </template>
 
 <script>
+	import axios from 'axios'
 //vuex已经在main.js中注入所有组件，不必再重复引入
 	export default{
 		name:'list',
@@ -41,8 +47,22 @@
 		},
 		mounted(){
 			//获取vuex中的数据
-			this.data = this.$store.state.list
+			var that = this
+			that.data = that.$store.state.list
 			//console.log(this.$store.state.count);
+			axios.get('./../static/music-list/list1-'+that.data.type+'.json').then(
+				res => {
+					that.dataList = res.data.playlist.tracks
+			}).catch(
+				ree => {
+					console.log(err)
+				}
+			)
+		},
+		methods:{
+			back(){
+				history.go(-1)
+			}
 		}
 	}
 </script>
@@ -187,5 +207,49 @@
 		font-weight:normal;
 		font-size:1rem;
 		color:#AAAAAA;
+	}
+	.all-music{
+		width:100%;
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+	.all-music li{
+		width:100%;
+		height:4rem;
+		line-height:4rem;
+		box-sizing: border-box;
+	}
+	.all-music li span{
+		width:10%;
+		max-width:40px;
+		height:4rem;
+		display:inline-block;
+		float:left;
+		text-align:center;
+		font-size:1.2rem;
+	}
+	.all-music li h4,p{
+		width:90%;
+		float:left;
+		text-align:left;
+		margin:0;
+		white-space:nowrap;
+		text-overflow:ellipsis;
+		overflow:hidden;
+	}
+	.all-music li h4{
+		font-size:1.2rem;
+			height:2.8rem;
+		line-height:2.8rem;
+	}
+		.all-music li p{
+			color:#AAAAAA;
+			font-size:1rem;
+			height:1rem;
+		line-height:1rem;
+	}
+	hr{
+		margin:1px 0 -1px 0;
 	}
 </style>
