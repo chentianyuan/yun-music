@@ -8,6 +8,7 @@ import musicList from '@/components/findList/music-list'
 import station from '@/components/findList/station'
 import range from '@/components/findList/range'
 import list from '@/components/listPage/list'
+import music from '@/components/main/music'
 
 Vue.use(Router)
 
@@ -45,6 +46,10 @@ export default new Router({
     	path:'/list',
     	name:'list',
     	component:list
-    }  
+    },{
+    	path:'/music',
+    	name:'music',
+    	component:music
+    }
   ]
 })

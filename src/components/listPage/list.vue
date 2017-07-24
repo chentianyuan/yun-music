@@ -23,7 +23,7 @@
 		<section>
 			<aside><span><i class="fa fa-play"></i>播放全部<b> (共{{dataList.length}}首)</b></span><span><i></i>多选</span></aside>
 				<ul class="all-music">
-					<li v-for="(music,index) in dataList">
+					<li v-for="(music,index) in dataList" v-on:click="play(music)">
 						<hr/>
 						<span>{{index + 1}}</span>
 						<h4>{{music.name}}</h4>
@@ -62,6 +62,10 @@
 		methods:{
 			back(){
 				history.go(-1)
+			},
+			play(music){
+				this.$store.dispatch('changeMusic',music)	
+				this.$router.push({'path':'/music'})
 			}
 		}
 	}

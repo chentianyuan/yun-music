@@ -15,7 +15,8 @@ export default new Vuex.Store({
 		list:{
 			//给初始值，避免组件中获取报错
 			type:1
-		}
+		},
+		music:{}
 	},
 	//暴露获取vuex数据的其他方法
 	getters:{
@@ -45,6 +46,9 @@ export default new Vuex.Store({
 		//歌单改变
 		changeList(context,music){
 			context.commit('changeList',music)	
+		},
+		changeMusic(context,music){
+			context.commit('changeMusic',music)
 		}
 	},
 	//变化函数，改变原始全局数据的方法
@@ -61,7 +65,9 @@ export default new Vuex.Store({
 	    //此改变被提交
 	    changeList(state, music){
 	    	state.list = music
-	    	console.log(music.name)
+	    },
+	    changeMusic(state,music){
+	    	state.music = music
 	    }
 	}
 })
