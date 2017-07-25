@@ -1,17 +1,32 @@
 <template>
-	<div>music</div>
+	<div>
+		<audio v-bind:src="this.music_information.mp3.url" controls="controls" autoplay="autoplay"></audio>
+	</div>
 </template>
 
 <script>
+	import axios from 'axios'
 	export default{
 		name:'music',
 		data(){
 			return {
-				music_information:{}
+				music_information:{
+					mp3:{
+						url:''
+					}
+				}
 			}
 		},
 		mounted(){
-			console.log(this.$store.state.music.al.picUrl)
+			var  id = this.$store.state.music.id
+			//长串的为歌曲id
+			var that = this
+			
+			axios.get('https://bird.ioliu.cn/netease/song?id='+id).then(
+				res => {
+					that.music_information = res.data.data
+					}
+				).catch(err => {})
 		}
 	}
 </script>

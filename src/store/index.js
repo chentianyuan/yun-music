@@ -16,7 +16,9 @@ export default new Vuex.Store({
 			//给初始值，避免组件中获取报错
 			type:1
 		},
-		music:{}
+		music:{
+			id: 41602884
+		}
 	},
 	//暴露获取vuex数据的其他方法
 	getters:{
