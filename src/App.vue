@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+		<audio style="display:none;" v-bind:src="this.music_information" controls="controls" autoplay="autoplay"></audio>
     <router-view></router-view>
     <footer-View></footer-View>
   </div>
@@ -9,8 +10,18 @@
 import footerView from "./components/main/footer.vue"
 export default {
 		name:'app',
+		data(){
+			return{
+				music_information:{
+					
+				}
+			}
+		},
 		components:{
 			footerView
+		},
+		mounted(){
+			
 		}
 }
 </script>

@@ -1,6 +1,8 @@
-<template>
+<!--<template>
 	<div>
+		
 		<audio v-bind:src="this.music_information.mp3.url" controls="controls" autoplay="autoplay"></audio>
+		
 	</div>
 </template>
 
@@ -32,4 +34,4 @@
 </script>
 
 <style>
-</style>
+</style>-->

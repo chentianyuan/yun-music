@@ -84,7 +84,6 @@ import list from '@/components/listPage/list'
 				err=>{
 					console.log(err)
 				})		
-			
 		},	
 		updated(){
 				var pic = document.getElementsByClassName("pic")

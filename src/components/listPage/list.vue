@@ -64,8 +64,9 @@
 				history.go(-1)
 			},
 			play(music){
+				//console.log(music)
 				this.$store.dispatch('changeMusic',music)	
-				this.$router.push({'path':'/music'})
+				//this.$router.push({'path':'/music'})
 			}
 		}
 	}

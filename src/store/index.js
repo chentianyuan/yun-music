@@ -51,6 +51,12 @@ export default new Vuex.Store({
 		},
 		changeMusic(context,music){
 			context.commit('changeMusic',music)
+		},
+		PrevMusic(context){
+			context.commit('PrevMusic')
+		},	
+		NextMusic(context){
+			context.commit('NextMusic')
 		}
 	},
 	//变化函数，改变原始全局数据的方法
@@ -70,6 +76,12 @@ export default new Vuex.Store({
 	    },
 	    changeMusic(state,music){
 	    	state.music = music
+	    },
+	    PrevMusic(state){
+	    	state.music.id--
+	    },
+	    NextMusic(state){
+	    	state.music.id++
 	    }
 	}
 })

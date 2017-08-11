@@ -1,7 +1,7 @@
 <template>
 	<div class="music-list">
 		<search></search>
-		<headnav :account="3"></headnav>
+		<headnav :account="3">排行榜待完善</headnav>
 	</div>
 </template>
 
