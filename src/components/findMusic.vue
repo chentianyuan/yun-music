@@ -58,10 +58,7 @@ import list from '@/components/listPage/list'
 		methods:{
 			go_list(music){
 				//不带查询参数，就是这样
-				//console.log(this.music_obj[0])
-				//bus.$emit("change",music)
-				//bus.$off('change')
-				//console.log(this.$store.state.count)
+
 				this.$store.dispatch('changeList',music)	
 				this.$router.push({'path':'/list'})
 			}
@@ -87,7 +84,6 @@ import list from '@/components/listPage/list'
 		},	
 		updated(){
 				var pic = document.getElementsByClassName("pic")
-				//console.log(pic)
 		          var width = pic[0].offsetWidth
 		            for(var i = 0 ; i < pic.length ; i++){
            	 			pic[i].style.height = width+"px"
