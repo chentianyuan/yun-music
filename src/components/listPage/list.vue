@@ -36,7 +36,7 @@
 
 <script>
 	import axios from 'axios'
-//vuex已经在main.js中注入所有组件，不必再重复引入
+	//vuex已经在main.js中注入所有组件，不必再重复引入
 	export default{
 		name:'list',
 		data(){

@@ -2,9 +2,9 @@
 	<div class="mywarper">
 		<div class="swiper-container">
 		    <div class="swiper-wrapper">
-		        <div class="swiper-slide"><img src="../../../static/img/banner1_单片机相关.png"/><span class="about">独家首发</span></div>
-		        <div class="swiper-slide"><img src="../../../static/img/banner2_android相关.png"/><span class="about">独家首发</span></div>
-		        <div class="swiper-slide"><img src="../../../static/img/banner2_android相关.png"/><span class="about">独家首发</span></div>     
+		        <div class="swiper-slide"><img src="../../../static/img/img1.png"/><span class="about">独家首发</span></div>
+		        <div class="swiper-slide"><img src="../../../static/img/img2.jpg"/><span class="about">独家首发</span></div>
+		        <div class="swiper-slide"><img src="../../../static/img/img3.jpg"/><span class="about">独家首发</span></div>     
 		    </div>
 		    
 		    <div class="swiper-pagination"></div>

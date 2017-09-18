@@ -1,0 +1,26 @@
+{
+	"result":[
+		{
+			"title":"采铜丶好书精读",
+			"topic":"每周帮你消化一本好书",
+			"updateDate":"9月18日更新",
+			"content":"<<直觉>>:直觉什么时候最有效",
+			"price":"￥99",
+			"url":"../../../static/station_imgs/img1.jpg"
+		},{
+			"title":"陈立客厅",
+			"topic":"影响你未来的100次心理谈话",
+			"updateDate":"9月17日更新",
+			"content":"加餐问答:性格内向真的会影响人际交往吗",
+			"price":"￥99",
+			"url":"../../../static/station_imgs/img2.jpg"
+		},{
+			"title":"中国古代文化大师课",
+			"topic":"垫付你对中国历史文化的认知",
+			"updateDate":"9月15日更新",
+			"content":"职官|皇帝与丞相是如何相处的？",
+			"price":"￥99",
+			"url":"../../../static/station_imgs/img3.jpg"
+		}
+	]
+}

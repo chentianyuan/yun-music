@@ -72,11 +72,10 @@ import list from '@/components/listPage/list'
 		},
 		mounted(){
 			//此处的获取还是必须的
-			var that = this
 			axios.get('./static/data1.json').then(
 				res=>{
 					//res是整个数据对象，其中的data才是我们需要的数据
-					that.music_obj = res.data.result
+					this.music_obj = res.data.result
 				}).catch(
 				err=>{
 					console.log(err)
@@ -145,8 +144,7 @@ import list from '@/components/listPage/list'
 		padding-left:8px;
 		box-sizing: border-box;
 		border-left:3px solid rgb(232,0,18);
-		font-size:1rem;
-		
+		font-size:1.2rem;
 	}
 	.intruduce{
 		width:100%;
