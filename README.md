@@ -1,30 +1,22 @@
 # yun-music
 
-> 仿网易云移动端
+> 仿网易云移动端,项目由vue-cli搭建
 
-## Build Setup
+## 技术栈 vue2.0、vue-router、axios、vuex、ES6、flex布局
 
 ``` bash
-# install dependencies
+# 安装依赖
 npm install
 
-# serve with hot reload at localhost:8080
+# 在本地开启服务 端口号8080
 npm run dev
 
-# build for production with minification
-npm run build
+#目前只实现了基本功能，不过作为vue的初学者，还是收获颇多
+*路由跳转及分级
+*路由传值及取值
+*vuex使用
+*computed、watch、vue生命周期
+*音乐播放器实现思路
+*...
 
-# build for production and view the bundle analyzer report
-npm run build --report
 
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
